@@ -9,7 +9,7 @@ export default function Socials() {
 	return (
 		<div className='flex gap-3 justify-center weight-bold my-2'>
 			<div
-				className='flex items-center gap-1 text-sm px-2 bg-linkedin rounded-2xl cursor-pointer'
+				className='flex items-center gap-1 text-sm px-2 text-socials bg-linkedin rounded-2xl cursor-pointer hover:animate-bounce'
 				onClick={() => redirect("https://www.linkedin.com")}
 			>
 				<svg
@@ -45,10 +45,10 @@ export default function Socials() {
 						</g>
 					}
 				</svg>
-				<div className='font-bold text-socials'>LinkedIn</div>
+				<div>LinkedIn</div>
 			</div>
 			<div
-				className='flex gap-1 text-sm py-1 px-2 bg-github rounded-2xl cursor-pointer items-center'
+				className='flex gap-1 text-sm py-1 px-2 bg-github rounded-2xl cursor-pointer items-center hover:animate-bounce'
 				onClick={() => redirect("https://github.com/SashaBerkowsky")}
 			>
 				<svg
@@ -66,7 +66,7 @@ export default function Socials() {
 				<div className='text-socials'>Github</div>
 			</div>
 			<div
-				className='flex gap-1 text-sm py-1 px-2 bg-red-dark text-socials rounded-2xl cursor-pointer items-center'
+				className='flex gap-1 text-sm py-1 px-2 bg-red-dark text-socials rounded-2xl cursor-pointer items-center hover:animate-bounce'
 				onClick={() => redirect("mailto:snberkowsky@gmail.com")}
 			>
 				<svg
@@ -87,7 +87,7 @@ export default function Socials() {
 				<div>Email</div>
 			</div>
 			<div
-				className='flex gap-1 text-sm px-2 bg-cyan-light rounded-2xl items-center cursor-pointer'
+				className='flex gap-1 text-sm px-2 bg-cyan-light rounded-2xl items-center cursor-pointer hover:animate-bounce'
 				onClick={() =>
 					redirect(
 						"https://raw.githubusercontent.com/SashaBerkowsky/cv/main/cv-eng.pdf"
