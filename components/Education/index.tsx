@@ -23,8 +23,8 @@ export default function Education() {
 				es: "Licenciatura, Universidad de Buenos Aires",
 			},
 			description: {
-				en: "Designed, implemented and managed a power web app with thousands of users, serving as a plataform that transforms the real estate sector into a collaborative ecosystem without intermediaries. ",
-				es: "Participé en el desarrollo y mantenimiento de una power web app con miles de usuarios la cual sirve como plataforma que transforma el sector inmobiliario en un ecosistema colaborativo sin intermediarios.",
+				en: "As a current computer science student I'm building a solid theoretical and practical foundation in order to pursue scientific research and continue to expand the body of knowledge in the field.",
+				es: "Actualmente me encuentro estudiando para obtener una sólida formación teórica y práctica con el fin de dedicarme a la investigación científica para continuar trabajando en ampliar el cuerpo de conocimientos de la disciplina",
 			},
 			period: { en: "2022-2024", es: "2022-2024" },
 		},
@@ -38,8 +38,8 @@ export default function Education() {
 				es: "Título Terciario, ORT Argentina",
 			},
 			description: {
-				en: "Designed and implemented a stats website for an amateur basketball tournament featuring more than fourty teams and over six hundred played matches.",
-				es: "Participé en el diseño e implementación de una página de estadísticas para un torneo amateur de basquet donde participan más de cuarenta equipos con más de seiscientos partidos jugados",
+				en: "I'm Educated to perform professionally as a Developer, Tester, Functional Analyst, Software Architect, Database Administrator, Quality Assurance Specialist, or Systems Auditor.",
+				es: "Capacitado para desempeñarme en diferentes roles, tales como Desarrollador, Tester, Analista Funcional, Arquitecto de Software, Administrador de Bases de Datos, Asegurador de Calidad (QA) o Consultor en informática.",
 			},
 			period: { en: "2020-2022", es: "2020-2022" },
 		},
@@ -53,8 +53,8 @@ export default function Education() {
 				es: "Título Secundario, ORT Argentina",
 			},
 			description: {
-				en: "Designed, implemented and managed a power web app with thousands of users, serving as a plataform that transforms the real estate sector into a collaborative ecosystem without intermediaries. ",
-				es: "Participé en el desarrollo y mantenimiento de una power web app con miles de usuarios la cual sirve como plataforma que transforma el sector inmobiliario en un ecosistema colaborativo sin intermediarios.",
+				en: "Focused on Computer Science and Digital Media. Because of this I was able to get into programming in a very early age",
+				es: "Con orientación en Informática y Medios de Comunicación Digitales. Gracias a esto pude introducirme a la programación desde una muy temprana edad",
 			},
 			period: { en: "2013-2018", es: "2013-2018" },
 		},
