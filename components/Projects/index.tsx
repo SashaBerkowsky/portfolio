@@ -18,8 +18,8 @@ export default function Projects() {
 	const { language } = useContext(LanguageContext);
 	const content: Content = {
 		title: {
-			en: "Projects I took part",
-			es: "Proyectos donde participo",
+			en: "Projects",
+			es: "Proyectos",
 		},
 		espaciosya: {
 			en: "EspaciosYA!",
