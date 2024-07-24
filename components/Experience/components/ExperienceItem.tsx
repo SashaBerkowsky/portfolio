@@ -17,7 +17,7 @@ export default function ExperienceItem({
 		<div className='flex h-44 gap-3'>
 			<div className='relative w-full bg-brightBlue-dark dark:bg-brightWhite-dark rounded-xl shadow-sm shadow-cyan-dark px-4 py-1 text-center'>
 				<div className='text-center font-title'>{work}</div>
-				<div className='opacity-80 text-xs text-center font-title'>{role}</div>
+				<div className='opacity-60 text-xs text-center font-title'>{role}</div>
 				<div className='h-3/5 mt-2 text-center text-xs'>{description}</div>
 				<div className='opacity-80 text-center text-xs'>{period}</div>
 				<div className='absolute top-1 right-1'>

@@ -258,8 +258,8 @@ export default function Proyects() {
 							</div>
 							<div className='text-center text-sm text-wrap'>
 								{"I'm"} constantly learning and improving as a developer, always
-								willing to try new languages and tecnologies. Currently my main
-								focus is in backend developement
+								willing to try new languages and tecnologies so feel free to
+								check my Github if you want to see what {"I'm"} up to!
 							</div>
 						</div>
 					</div>
