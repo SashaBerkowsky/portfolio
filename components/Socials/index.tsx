@@ -7,7 +7,7 @@ export default function Socials() {
 	}
 
 	return (
-		<div className='flex gap-3 justify-center weight-bold my-2'>
+		<div className='flex gap-3 justify-center weight-bold my-2 select-none'>
 			<div
 				className='flex items-center gap-1 text-sm px-2 text-socials bg-linkedin rounded-2xl cursor-pointer hover:animate-bounce'
 				onClick={() => redirect("https://www.linkedin.com")}

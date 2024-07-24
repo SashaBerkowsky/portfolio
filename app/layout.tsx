@@ -19,7 +19,7 @@ export default function RootLayout({
 			<body
 				className={`${inter.className} bg-background-light dark:bg-background-dark`}
 			>
-				<main className='flex min-h-screen flex-col w-full mx-auto md:w-4/5 lg:w-1/2 p-8 bg-background-light dark:bg-background-dark'>
+				<main className='flex min-h-screen flex-col w-full mx-auto md:w-5/6 lg:w-3/4 2xl:w-1/2 p-8 bg-background-light dark:bg-background-dark'>
 					{children}
 				</main>
 			</body>
