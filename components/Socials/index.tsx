@@ -1,7 +1,19 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "../../context";
+import { Section } from "..";
 
 export default function Socials() {
+	const LINKEDIN_LINK: string = "https://www.linkedin.com";
+	const GITHUB_LINK: string = "https://github.com/SashaBerkowsky";
+	const EMAIL_LINK: string = "mailto:snberkowsky@gmail.com";
+	const RESUME_LINK_ES: string =
+		"https://raw.githubusercontent.com/SashaBerkowsky/cv/main/cv-eng.pdf";
+	const RESUME_LINK_EN: string =
+		"https://raw.githubusercontent.com/SashaBerkowsky/cv/main/cv-eng.pdf";
+
+	const { language } = useContext(LanguageContext);
+
 	function redirect(url: string): void {
 		window.open(url, "_blank");
 	}
@@ -10,7 +22,7 @@ export default function Socials() {
 		<div className='flex gap-3 justify-center weight-bold my-2 select-none'>
 			<div
 				className='flex items-center gap-1 text-sm px-2 text-socials bg-linkedin rounded-2xl cursor-pointer hover:animate-bounce'
-				onClick={() => redirect("https://www.linkedin.com")}
+				onClick={() => redirect(LINKEDIN_LINK)}
 			>
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
@@ -49,7 +61,7 @@ export default function Socials() {
 			</div>
 			<div
 				className='flex gap-1 text-sm py-1 px-2 bg-github rounded-2xl cursor-pointer items-center hover:animate-bounce'
-				onClick={() => redirect("https://github.com/SashaBerkowsky")}
+				onClick={() => redirect(GITHUB_LINK)}
 			>
 				<svg
 					role='img'
@@ -67,7 +79,7 @@ export default function Socials() {
 			</div>
 			<div
 				className='flex gap-1 text-sm py-1 px-2 bg-red-dark text-socials rounded-2xl cursor-pointer items-center hover:animate-bounce'
-				onClick={() => redirect("mailto:snberkowsky@gmail.com")}
+				onClick={() => redirect(EMAIL_LINK)}
 			>
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
@@ -89,9 +101,7 @@ export default function Socials() {
 			<div
 				className='flex gap-1 text-sm px-2 bg-cyan-light rounded-2xl items-center cursor-pointer hover:animate-bounce'
 				onClick={() =>
-					redirect(
-						"https://raw.githubusercontent.com/SashaBerkowsky/cv/main/cv-eng.pdf"
-					)
+					redirect(language === "en" ? RESUME_LINK_EN : RESUME_LINK_ES)
 				}
 			>
 				<svg

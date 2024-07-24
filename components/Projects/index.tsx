@@ -9,7 +9,11 @@ import overtime from "../../public/proyects/overtime.png";
 import overtimeLogo from "../../public/proyects/overtime-logo.png";
 import github from "../../public/proyects/github.png";
 
-export default function Proyects() {
+export default function Projects() {
+	const ESPACIOSYA_LINK: string = "https://espaciosya.com/";
+	const OVERTIME_LINK: string = "https://overtimebasquet.com/";
+	const GITHUB_LINK: string = "https://github.com/SashaBerkowsky";
+
 	const carouselRef = useRef<HTMLDivElement>(null);
 	const { language } = useContext(LanguageContext);
 	const content: Content = {
@@ -30,6 +34,43 @@ export default function Proyects() {
 			es: "github",
 		},
 	};
+
+	const espaciosYaContent: Content = {
+		title: {
+			en: "EspaciosYA!",
+			es: "EspaciosYA!",
+		},
+		description: {
+			en: "A power web app with thousands of users, serving as a plataform that transforms the real estate sector into a collaborative ecosystem without intermediaries.",
+			es: "Una power web app con miles de usuarios. Esta es una plataforma que transforma el sector inmobiliario en un ecosistema colaborativo sin intermediarios.",
+		},
+	};
+
+	const overtimeContent: Content = {
+		title: {
+			en: "Overtime",
+			es: "Overtime",
+		},
+		description: {
+			en: "A stats website for an amateur basketball tournament featuring more than fourty teams and over six hundred played matches.",
+			es: "Una página de estadísticas para un torneo amateur de basquet donde participan más de cuarenta equipos con más de seiscientos partidos jugados.",
+		},
+	};
+
+	const githubContent: Content = {
+		title: {
+			en: "See more!",
+			es: "Más!",
+		},
+		description: {
+			en: "I'm constantly learning and improving as a developer, always willing to try new languages and tecnologies so feel free to check my Github if you want to see what I'm up to!",
+			es: "Estoy en constante desarrollo y aprendizaje como desarrollador, siempre dispuesto a probar nuevos lenguajes y tecnologias asi que si queres estar al día con lo que estoy haciendo pasate por mi Github!",
+		},
+	};
+
+	function redirect(url: string): void {
+		window.open(url, "_blank");
+	}
 
 	const scrollLeft = () => {
 		if (carouselRef.current) {
@@ -101,7 +142,10 @@ export default function Proyects() {
 							className='w-full md:w-2/3 rounded-lg shadow-sm shadow-black-light'
 						/>
 						<div className='md:w-1/3 flex flex-col rounded-md gap-1'>
-							<div className='flex justify-end mt-2 md:mt-0'>
+							<div
+								className='flex justify-end mt-2 md:mt-0 cursor-pointer'
+								onClick={() => redirect(ESPACIOSYA_LINK)}
+							>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									fill='none'
@@ -125,7 +169,7 @@ export default function Proyects() {
 									className='w-5'
 								/>
 								<div className='text-center text-lg font-title mt-2'>
-									EspaciosYa
+									{espaciosYaContent.title[language]}
 								</div>
 							</div>
 							<div className='flex gap-2 justify-center italic my-3'>
@@ -140,9 +184,7 @@ export default function Proyects() {
 								</div>
 							</div>
 							<div className='h-2/3 text-center text-sm text-wrap'>
-								A power web app with thousands of users, serving as a plataform
-								that transforms the real estate sector into a collaborative
-								ecosystem without intermediaries.
+								{espaciosYaContent.description[language]}
 							</div>
 						</div>
 					</div>
@@ -153,7 +195,10 @@ export default function Proyects() {
 							className='w-full md:w-2/3 rounded-lg shadow-sm shadow-black-light'
 						/>
 						<div className='flex md:w-1/3 flex-col rounded-md'>
-							<div className='flex justify-end mt-2 md:mt-0'>
+							<div
+								className='flex justify-end mt-2 md:mt-0 cursor-pointer'
+								onClick={() => redirect(OVERTIME_LINK)}
+							>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									fill='none'
@@ -176,7 +221,7 @@ export default function Proyects() {
 									className='w-10'
 								/>
 								<div className='text-center text-lg font-title mt-1'>
-									Overtime
+									{overtimeContent.title[language]}
 								</div>
 							</div>
 							<div className='flex gap-2 justify-center italic my-3'>
@@ -188,8 +233,7 @@ export default function Proyects() {
 								</div>
 							</div>
 							<div className='text-center text-sm text-wrap'>
-								A stats website for an amateur basketball tournament featuring
-								more than fourty teams and over six hundred played matches.
+								{overtimeContent.description[language]}
 							</div>
 						</div>
 					</div>
@@ -200,7 +244,10 @@ export default function Proyects() {
 							className='w-full md:w-2/3 rounded-lg shadow-sm shadow-black-light'
 						/>
 						<div className='flex md:w-1/3 flex-col rounded-md'>
-							<div className='flex justify-end mt-2 md:mt-0'>
+							<div
+								className='flex justify-end mt-2 md:mt-0 cursor-pointer'
+								onClick={() => redirect(GITHUB_LINK)}
+							>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									fill='none'
@@ -227,7 +274,7 @@ export default function Proyects() {
 									<path d='M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'></path>
 								</svg>
 								<div className='text-center text-lg font-title mt-1'>
-									See more!
+									{githubContent.title[language]}
 								</div>
 							</div>
 							<div className='flex flex-wrap gap-2 justify-center italic my-3'>
@@ -257,25 +304,10 @@ export default function Proyects() {
 								</div>
 							</div>
 							<div className='text-center text-sm text-wrap'>
-								{"I'm"} constantly learning and improving as a developer, always
-								willing to try new languages and tecnologies so feel free to
-								check my Github if you want to see what {"I'm"} up to!
+								{githubContent.description[language]}
 							</div>
 						</div>
 					</div>
-					{/*
-					<div className='flex-shrink-0 w-full snap-start'>
-						<div>
-							<Image src={overtime} alt='overtime preview' /> b
-						</div>
-					</div>
-					<div className='flex-shrink-0 w-full snap-start'>
-						<div>
-							<Image src={github} alt='github profile preview' /> b
-						</div>
-					</div>
-
-					*/}
 				</div>
 			</div>
 		</Section>

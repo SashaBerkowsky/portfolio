@@ -9,7 +9,7 @@ import {
 	Interests,
 	Header,
 	LanguageToggle,
-	Proyects,
+	Projects,
 	Socials,
 } from "../components";
 import { LanguageProvider } from "../context";
@@ -32,7 +32,7 @@ export default function Home() {
 					<div className='my-2 md:hidden md:my-0' />
 					<Education />
 				</div>
-				<Proyects />
+				<Projects />
 				<Interests />
 				<Future />
 			</div>
