@@ -14,7 +14,9 @@ export default function Education() {
 
 	return (
 		<Section>
-			<div className='font-title text-xl'>{content.title[language]}</div>
+			<div className='font-title text-xl text-center'>
+				{content.title[language]}
+			</div>
 			<div className='font-par'>test</div>
 		</Section>
 	);

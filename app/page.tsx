@@ -27,8 +27,9 @@ export default function Home() {
 			</div>
 			<div className='flex flex-col gap-2 mt-3'>
 				<About />
-				<div className='flex gap-2'>
+				<div className='gap-2 md:flex'>
 					<Experience />
+					<div className='my-2 md:hidden md:my-0' />
 					<Education />
 				</div>
 				<Proyects />
