@@ -14,7 +14,7 @@ export default function ExperienceItem({
 	finished,
 }: ExperienceItemProps) {
 	return (
-		<div className='flex h-44 gap-3'>
+		<div className='flex h-44 gap-3 hover:scale-105'>
 			<div className='relative w-full bg-brightBlue-dark dark:bg-brightWhite-dark rounded-xl shadow-sm shadow-cyan-dark px-4 py-1 text-center'>
 				<div className='text-center font-title'>{work}</div>
 				<div className='opacity-60 text-xs text-center font-title'>{role}</div>
