@@ -6,6 +6,6 @@ export { default as Future } from "./Future";
 export { default as Header } from "./Header";
 export { default as Interests } from "./Interests";
 export { default as LanguageToggle } from "./LanguageToggle";
-export { default as Proyects } from "./Proyects";
+export { default as Proyects } from "./Projects";
 export { default as Section } from "./Section";
 export { default as Socials } from "./Socials";

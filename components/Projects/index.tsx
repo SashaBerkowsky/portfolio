@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from "react";
 import { LanguageContext } from "../../context";
 import { Content } from "../../types";
-import { Section } from "../";
+import { Section } from "..";
 import Image from "next/image";
 import espaciosYa from "../../public/proyects/espaciosya.png";
 import espaciosYaLogo from "../../public/proyects/espaciosya-logo.png";
@@ -14,7 +14,7 @@ export default function Proyects() {
 	const { language } = useContext(LanguageContext);
 	const content: Content = {
 		title: {
-			en: "Proyects I took part",
+			en: "Projects I took part",
 			es: "Proyectos donde participo",
 		},
 		espaciosya: {
@@ -139,10 +139,10 @@ export default function Proyects() {
 									Firebase
 								</div>
 							</div>
-							<div className='h-2/3 text-center text-sm'>
-								Designed, implemented and managed a power web app with thousands
-								of users, serving as a plataform that transforms the real estate
-								sector into a collaborative ecosystem without intermediaries.
+							<div className='h-2/3 text-center text-sm text-wrap'>
+								A power web app with thousands of users, serving as a plataform
+								that transforms the real estate sector into a collaborative
+								ecosystem without intermediaries.
 							</div>
 						</div>
 					</div>
@@ -187,10 +187,9 @@ export default function Proyects() {
 									Tailwind
 								</div>
 							</div>
-							<div className='text-center text-sm'>
-								Designed and implemented a stats website for an amateur
-								basketball tournament featuring more than fourty teams and over
-								six hundred played matches.
+							<div className='text-center text-sm text-wrap'>
+								A stats website for an amateur basketball tournament featuring
+								more than fourty teams and over six hundred played matches.
 							</div>
 						</div>
 					</div>
@@ -257,7 +256,7 @@ export default function Proyects() {
 									Latex
 								</div>
 							</div>
-							<div className='text-center text-sm'>
+							<div className='text-center text-sm text-wrap'>
 								{"I'm"} constantly learning and improving as a developer, always
 								willing to try new languages and tecnologies. Currently my main
 								focus is in backend developement
