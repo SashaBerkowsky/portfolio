@@ -8,55 +8,55 @@ export default function Education() {
 	const { language } = useContext(LanguageContext);
 	const content: Content = {
 		title: {
-			en: "Experience",
-			es: "Experiencia",
+			en: "Education",
+			es: "Educación",
 		},
 	};
 	const experience: Content[] = [
 		{
 			title: {
-				en: "EspaciosYA!",
-				es: "EspaciosYA!",
+				en: "Computer Science",
+				es: "Ciencias de la Computación",
 			},
 			role: {
-				en: "Full stack dev, Freelance",
-				es: "Full stack dev, Freelance",
+				en: "Bachelor's, University of Buenos Aires",
+				es: "Licenciatura, Universidad de Buenos Aires",
 			},
 			description: {
 				en: "Designed, implemented and managed a power web app with thousands of users, serving as a plataform that transforms the real estate sector into a collaborative ecosystem without intermediaries. ",
 				es: "Participé en el desarrollo y mantenimiento de una power web app con miles de usuarios la cual sirve como plataforma que transforma el sector inmobiliario en un ecosistema colaborativo sin intermediarios.",
 			},
-			period: { en: "2023-2024", es: "2023-2024" },
+			period: { en: "2022-2024", es: "2022-2024" },
 		},
 		{
 			title: {
-				en: "Overtime Basquet",
-				es: "Overtime Basquet",
+				en: "Systems Analysis",
+				es: "Analista de Sistemas",
 			},
 			role: {
-				en: "Full stack dev, Freelance",
-				es: "Full stack dev, Freelance",
+				en: "Associate Degree, ORT Argentina",
+				es: "Título Terciario, ORT Argentina",
 			},
 			description: {
 				en: "Designed and implemented a stats website for an amateur basketball tournament featuring more than fourty teams and over six hundred played matches.",
 				es: "Participé en el diseño e implementación de una página de estadísticas para un torneo amateur de basquet donde participan más de cuarenta equipos con más de seiscientos partidos jugados",
 			},
-			period: { en: "2022-2023", es: "2022-2023" },
+			period: { en: "2020-2022", es: "2020-2022" },
 		},
 		{
 			title: {
-				en: "EspaciosYA!",
-				es: "EspaciosYA!",
+				en: "Technical High School",
+				es: "Secundario Técnico",
 			},
 			role: {
-				en: "Full stack dev",
-				es: "Full stack dev",
+				en: "High School Diploma, ORT Argentina",
+				es: "Título Secundario, ORT Argentina",
 			},
 			description: {
 				en: "Designed, implemented and managed a power web app with thousands of users, serving as a plataform that transforms the real estate sector into a collaborative ecosystem without intermediaries. ",
 				es: "Participé en el desarrollo y mantenimiento de una power web app con miles de usuarios la cual sirve como plataforma que transforma el sector inmobiliario en un ecosistema colaborativo sin intermediarios.",
 			},
-			period: { en: "2021-2022", es: "2021-2022" },
+			period: { en: "2013-2018", es: "2013-2018" },
 		},
 	];
 
