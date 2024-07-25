@@ -68,7 +68,7 @@ export default function Education() {
 			<div className='flex flex-col gap-3 mt-4'>
 				{experience.map((job, i) => (
 					<EducationItem
-						key={job.title[language]}
+						key={`education-item-${job.title[language]}-${i}`}
 						finished={i !== 0}
 						work={job.title[language]}
 						role={job.role[language]}

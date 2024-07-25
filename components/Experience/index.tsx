@@ -68,7 +68,7 @@ export default function Experience() {
 			<div className='flex flex-col gap-3 mt-4'>
 				{experience.map((job, i) => (
 					<ExperienceItem
-						key={job.title[language]}
+						key={`experience-item-${job.title[language]}-${i}`}
 						finished={i !== 0}
 						work={job.title[language]}
 						role={job.role[language]}
