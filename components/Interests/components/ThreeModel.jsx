@@ -11,7 +11,6 @@ function KeyboardModel() {
 
 	useFrame((a) => {
 		if (groupRef.current) {
-			console.log(a);
 			groupRef.current.rotation.z += 0.01;
 		}
 	});
@@ -46,12 +45,60 @@ function GameboyModel() {
 	);
 }
 
+function BassGuitar() {
+	const BASS_GUITAR = "/interests/bass_guitar.glb";
+	const gltf = useLoader(GLTFLoader, BASS_GUITAR);
+	const groupRef = useRef();
+
+	useFrame((a) => {
+		if (groupRef.current) {
+			groupRef.current.rotation.y += 0.01;
+			// groupRef.current.rotation.x += 0.01;
+			// groupRef.current.rotation.z += 0.01;
+		}
+	});
+
+	return (
+		<group
+			rotation={[0, 0, Math.PI * 1.75]}
+			ref={groupRef}
+			position={[0, 0, -2]}
+		>
+			<primitive scale={6} object={gltf.scene} />
+		</group>
+	);
+}
+
+function BreadModel() {
+	const BREAD_REF = "/interests/bread.glb";
+	const gltf = useLoader(GLTFLoader, BREAD_REF);
+	const groupRef = useRef();
+
+	useFrame((a) => {
+		if (groupRef.current) {
+			// groupRef.current.rotation.z += 0.01;
+			// groupRef.current.rotation.x += 0.01;
+			groupRef.current.rotation.y += 0.01;
+		}
+	});
+
+	return (
+		<group rotation={[0, 0, 0]} ref={groupRef} position={[0, 0, -2]}>
+			<primitive scale={0.5} object={gltf.scene} />
+		</group>
+	);
+}
+
 function getModel(id) {
 	switch (id) {
 		case 0:
 			return <KeyboardModel />;
 		case 1:
 			return <GameboyModel />;
+		case 2:
+			return <BassGuitar />;
+		case 3:
+			return <BreadModel />;
 		default:
 			return <KeyboardModel />;
 	}
@@ -60,7 +107,7 @@ function getModel(id) {
 export default function ThreeModelCanvas({ modelNumber }) {
 	return (
 		<Canvas style={{ height: "400px" }}>
-			<ambientLight intensity={0.5} />
+			<ambientLight intensity={1} />
 			<pointLight position={[10, 10, 10]} />
 			{getModel(modelNumber)}
 		</Canvas>
