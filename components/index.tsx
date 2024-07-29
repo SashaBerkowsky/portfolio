@@ -1,4 +1,5 @@
 export { default as About } from "./About";
+export { default as ContactMe } from "./ContactMe";
 export { default as DarkModeToggle } from "./DarkModeToggle";
 export { default as Education } from "./Education";
 export { default as Experience } from "./Experience";
@@ -9,3 +10,4 @@ export { default as LanguageToggle } from "./LanguageToggle";
 export { default as Projects } from "./Projects";
 export { default as Section } from "./Section";
 export { default as Socials } from "./Socials";
+export { default as Title } from "./Title";

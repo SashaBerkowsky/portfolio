@@ -1,7 +1,8 @@
+"use client";
 import React, { useContext, useRef } from "react";
 import { LanguageContext } from "../../context";
 import { Content } from "../../types";
-import { Section } from "..";
+import { Section, Title } from "..";
 import Image from "next/image";
 import espaciosYa from "../../public/proyects/espaciosya.png";
 import espaciosYaLogo from "../../public/proyects/espaciosya-logo.png";
@@ -110,9 +111,7 @@ export default function Projects() {
 						d='M15.75 19.5 8.25 12l7.5-7.5'
 					/>
 				</svg>
-				<div className='font-title text-xl text-center'>
-					{content.title[language]}
-				</div>
+				<Title title={content.title[language]} />
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
 					fill='none'

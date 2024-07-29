@@ -2,7 +2,7 @@
 import React, { useContext, useState, Suspense } from "react";
 import { LanguageContext } from "../../context";
 import { Content } from "../../types";
-import { Section } from "../";
+import { Section, Title } from "../";
 import ThreeModel from "./components/ThreeModel";
 
 function LoadingScreen() {
@@ -49,9 +49,7 @@ export default function Interests() {
 
 	return (
 		<Section className='min-h-[550px] md:min-h-0'>
-			<div className='font-title text-xl text-center'>
-				{content.title[language]}
-			</div>
+			<Title title={content.title[language]} />
 			<div className='md:flex h-[400px]'>
 				<div className='w-full py-5 '>
 					<div className='flex w-full  h-10 rounded-md bg-brightBlue-dark dark:bg-brightWhite-dark px-2 '>

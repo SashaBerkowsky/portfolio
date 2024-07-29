@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../../context";
 import { Content } from "../../types";
-import { Section } from "../";
+import { Section, Title } from "../";
 
 export default function About() {
 	const { language } = useContext(LanguageContext);
@@ -17,9 +17,7 @@ export default function About() {
 	};
 	return (
 		<Section>
-			<div className='font-title text-xl text-center'>
-				{content.title[language]}
-			</div>
+			<Title title={content.title[language]} />
 			<div className='text-center md:text-left font-par mt-2 text-pretty'>
 				{content.description[language]}
 			</div>

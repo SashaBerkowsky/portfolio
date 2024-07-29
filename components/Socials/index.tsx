@@ -19,7 +19,7 @@ export default function Socials() {
 	}
 
 	return (
-		<div className='flex gap-3 justify-center weight-bold my-2 select-none'>
+		<div className='flex gap-3 justify-center weight-bold my-2 select-none flex-wrap'>
 			<div
 				className='flex items-center gap-1 text-sm px-2 text-socials bg-linkedin rounded-2xl cursor-pointer hover:animate-bounce'
 				onClick={() => redirect(LINKEDIN_LINK)}
@@ -99,7 +99,7 @@ export default function Socials() {
 				<div>Email</div>
 			</div>
 			<div
-				className='flex gap-1 text-sm px-2 bg-cyan-light rounded-2xl items-center cursor-pointer hover:animate-bounce'
+				className='flex gap-1 text-sm px-2 py-1 bg-cyan-light rounded-2xl items-center cursor-pointer hover:animate-bounce'
 				onClick={() =>
 					redirect(language === "en" ? RESUME_LINK_EN : RESUME_LINK_ES)
 				}

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../../context";
 import { Content } from "../../types";
-import { Section } from "../";
+import { Section, Title } from "../";
 import ExperienceItem from "./components/ExperienceItem";
 
 export default function Experience() {
@@ -62,9 +62,7 @@ export default function Experience() {
 
 	return (
 		<Section>
-			<div className='font-title text-xl text-center'>
-				{content.title[language]}
-			</div>
+			<Title title={content.title[language]} />
 			<div className='flex flex-col gap-3 mt-4'>
 				{experience.map((job, i) => (
 					<ExperienceItem

@@ -1,3 +1,4 @@
+"use client";
 // I shouldn use this but i didnt want to think
 import React, { createContext, useContext, useState } from "react";
 import { LanguageContext as LanguageContextType } from "../../types";
