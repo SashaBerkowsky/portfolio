@@ -8,7 +8,6 @@ import {
 	Education,
 	Experience,
 	Future,
-	Interests,
 	Header,
 	LanguageToggle,
 	Projects,
@@ -38,7 +37,6 @@ export default function Home() {
 						<Education />
 					</div>
 					<Projects />
-					<Interests />
 					<Future />
 				</div>
 			</main>
