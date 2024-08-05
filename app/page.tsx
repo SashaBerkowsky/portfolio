@@ -20,7 +20,6 @@ import { LanguageProvider } from "../context";
 export default function Home() {
 	return (
 		<LanguageProvider>
-			<ContactButton />
 			<main className='flex min-h-screen flex-col w-full mx-auto md:w-5/6 lg:w-3/4 2xl:w-1/2 p-4 md:p-8 bg-background-light dark:bg-background-dark'>
 				<div className='flex flex-col items-center text-foreground-light dark:text-foreground-dark'>
 					<Header />
