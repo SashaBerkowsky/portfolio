@@ -41,11 +41,11 @@ export default function DarkModeToggle() {
 					/>
 				</svg>
 				<div
-					className='my-2 relative w-12 h-6 bg-gray-400 rounded-full shadow-inner bg-white-dark dark:bg-white-light'
+					className='my-2 relative w-12 h-6 rounded-full shadow-inner bg-white-dark dark:bg-white-light'
 					onClick={toggleDarkMode}
 				>
 					<div
-						className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-transform duration-300 transform bg-black-dark dark:bg-black-light ${
+						className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-transform duration-300 transform bg-brightWhite-light dark:bg-black-light ${
 							darkMode ? "right-6 translate-x-full" : "left-2 translate-x-0"
 						}`}
 					/>

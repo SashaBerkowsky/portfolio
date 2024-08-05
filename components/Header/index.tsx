@@ -33,7 +33,7 @@ export default function Header() {
 	return (
 		<div>
 			<Image
-				className='rounded-full w-3/5 mx-auto'
+				className='rounded-full w-2/3 mx-auto'
 				src={profilePic}
 				alt='profile pic'
 			/>
