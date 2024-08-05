@@ -1,5 +1,11 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
+import React, {
+	useCallback,
+	useContext,
+	useEffect,
+	useRef,
+	useState,
+} from "react";
 import { LanguageContext } from "../../context";
 import { Content } from "../../types";
 import { Button } from "@nextui-org/react";
@@ -8,6 +14,7 @@ export default function ContactButton() {
 	const { language } = useContext(LanguageContext);
 	const [showBtn, setShowBtn] = useState(true);
 	const [clickBtn, setClickBtn] = useState(false);
+	const scrollTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
 	const content: Content = {
 		contactMe: {
@@ -19,38 +26,42 @@ export default function ContactButton() {
 	function handleContactMe() {
 		window.scrollTo({
 			top: document.documentElement.scrollHeight,
-			behavior: "smooth", // This makes the scroll smooth
+			behavior: "smooth",
 		});
 		setClickBtn(true);
 	}
 
-	const handleScroll = () => {
+	const handleScroll = useCallback(() => {
 		const scrollTop = window.scrollY;
 		const scrollHeight = document.documentElement.scrollHeight;
 		const clientHeight = document.documentElement.clientHeight;
 		const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 100;
 
-		// Adjust the threshold percentage as needed
-		const threshold = 86; // Hide the element when 50% of the page is scrolled
+		const threshold = 86;
 
 		if (scrollPercentage > threshold) {
 			setShowBtn(false);
 		}
-	};
-
-	// Set up scroll event listener
-	useEffect(() => {
-		window.addEventListener("scroll", handleScroll);
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
 	}, []);
+
+	useEffect(() => {
+		const handleScrollDebounced = () => {
+			clearTimeout(scrollTimeoutRef.current);
+			scrollTimeoutRef.current = setTimeout(handleScroll, 100); // Debounce scroll handler
+		};
+
+		window.addEventListener("scroll", handleScrollDebounced);
+		return () => {
+			clearTimeout(scrollTimeoutRef.current);
+			window.removeEventListener("scroll", handleScrollDebounced);
+		};
+	}, [handleScroll]);
 
 	return (
 		!clickBtn &&
 		showBtn && (
 			<div className='relative w-full'>
-				<div className='fixed w-full flex justify-center bottom-5 z-50 animate-bounce'>
+				<div className='fixed w-full flex justify-center bottom-5 z-50 animate-bounce duration-200'>
 					<Button
 						radius='full'
 						color='secondary'
