@@ -53,7 +53,7 @@ export default function ContactButton() {
 				<div className='fixed w-full flex justify-center bottom-5 z-50 animate-bounce'>
 					<Button
 						radius='full'
-						color='primary'
+						color='secondary'
 						variant='shadow'
 						endContent={
 							<svg

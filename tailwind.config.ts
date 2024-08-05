@@ -121,6 +121,9 @@ const config: Config = {
 							DEFAULT: "#DCD7BA",
 							foreground: "#000000",
 						},
+						secondary: {
+							DEFAULT: "#24292e",
+						},
 						focus: "transparent",
 					},
 				},
@@ -128,6 +131,10 @@ const config: Config = {
 					colors: {
 						primary: {
 							DEFAULT: "#6693BF",
+							foreground: "#fff",
+						},
+						secondary: {
+							DEFAULT: "#C84053",
 							foreground: "#fff",
 						},
 						focus: "transparent",

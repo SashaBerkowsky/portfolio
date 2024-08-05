@@ -13,7 +13,7 @@ export default function LanguageToggle() {
 					onClick={toggleLanguage}
 				>
 					<div
-						className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-transform duration-300 transform bg-brightWhite-light dark:bg-black-light ${
+						className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-transform duration-300 transform bg-brightBlack-dark dark:bg-black-light ${
 							language === "en"
 								? "right-6 translate-x-full"
 								: "left-2 translate-x-0"
