@@ -1,4 +1,4 @@
-"use client";
+/*"use client";
 import React from "react";
 import {
 	About,
@@ -49,3 +49,4 @@ export default function Home() {
 		</LanguageProvider>
 	);
 }
+*/

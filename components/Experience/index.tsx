@@ -56,7 +56,7 @@ export default function Experience() {
 				en: "Designed, implemented and managed a power web app with thousands of users, serving as a plataform that transforms the real estate sector into a collaborative ecosystem without intermediaries. ",
 				es: "Participé en el desarrollo y mantenimiento de una power web app con miles de usuarios la cual sirve como plataforma que transforma el sector inmobiliario en un ecosistema colaborativo sin intermediarios.",
 			},
-			period: { en: "2021-2022", es: "2021-2022" },
+			period: { en: "2020-2022", es: "2020-2022" },
 		},
 	];
 
