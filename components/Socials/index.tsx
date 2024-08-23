@@ -4,7 +4,7 @@ import { LanguageContext } from "../../context";
 import { Section } from "..";
 
 export default function Socials() {
-	const LINKEDIN_LINK: string = "https://www.linkedin.com";
+	const LINKEDIN_LINK: string = "https://www.linkedin.com/in/sasha-berkowsky";
 	const GITHUB_LINK: string = "https://github.com/SashaBerkowsky";
 	const EMAIL_LINK: string = "mailto:snberkowsky@gmail.com";
 	const RESUME_LINK_ES: string =
